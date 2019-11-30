@@ -1,0 +1,34 @@
+{include file="Public/head"/}
+<body class="layui-layout-body">
+    <div id="LAY_app">
+	    <div class="layui-layout layui-layout-admin">
+	    	<!-- 头部区域 -->
+	    	{include file="Public/header"/}
+		    <!-- 侧边菜单 -->
+		    {include file="Public/left"/}
+		    <!-- 页面标签 -->
+		    {include file="Public/tabs"/}
+	        <!-- 主体内容 -->
+	        <div class="layui-body" id="LAY_app_body">
+		        <div class="layadmin-tabsbody-item layui-show">
+		            <iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+		        </div>
+	        </div>
+	      
+		    <!-- 辅助元素，一般用于移动设备下遮罩 -->
+		    <div class="layadmin-body-shade" layadmin-event="shade"></div>
+	    </div>
+    </div>
+
+    <script src="admin/layuiadmin/layui/layui.js"></script>
+    <script>
+	    layui.config({
+	    	base: 'admin/layuiadmin/' //静态资源所在路径
+	    }).extend({
+	    	index: 'lib/index' //主入口模块
+	    }).use('index');
+    </script>
+</body>
+</html>
+
+
